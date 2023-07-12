@@ -1,0 +1,60 @@
+@import "./sass/vendors/bootstrap.scss";
+
+@import "./sass/abstracts/mixins";
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/helpers";
+
+@import "./sass/base/base";
+@import "./sass/base/typography";
+
+@import "./sass/components/buttons";
+
+@import "./sass/layout/footer";
+@import "./sass/layout/sections";
+
+@import "./sass/sections/about";
+@import "./sass/sections/contact";
+@import "./sass/sections/hero";
+@import "./sass/sections/projects";
+
+// @import './status-indicator/styles.css';
+// @import 'status-indicator';
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.status {
+
+    font-size: 14px;
+
+    &.open:before {
+        background-color: #94E185;
+        border-color: #78D965;
+        box-shadow: 0px 0px 6px 1px #94E185;
+    }
+
+    &.in-progress:before {
+        background-color: #FFC182;
+        border-color: #FFB161;
+        box-shadow: 0px 0px 4px 1px #FFC182;
+    }
+
+    &.dead:before {
+        background-color: #C9404D;
+        border-color: #C42C3B;
+        box-shadow: 0px 0px 4px 1px #C9404D;
+    }
+
+    &:before {
+        content: ' ';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-right: 10px;
+        border: 1px solid #000;
+        border-radius: 7px;
+    }
+}
